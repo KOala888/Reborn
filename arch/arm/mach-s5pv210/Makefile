@@ -36,7 +36,6 @@ obj-$(CONFIG_MACH_HERRING)	+= herring-touchkey-led.o
 
 obj-$(CONFIG_MACH_HERRING)	+= dev-herring-phone.o
 
-<<<<<<< HEAD
 obj-$(CONFIG_MACH_ARIES)	+= mach-aries.o aries-rfkill.o
 obj-$(CONFIG_MACH_ARIES)	+= aries-vibrator.o
 obj-$(CONFIG_MACH_ARIES)	+= aries-btlpm.o
@@ -54,9 +53,8 @@ obj-$(CONFIG_MACH_VENTURI)	+= aries-watchdog.o
 obj-$(CONFIG_MACH_VENTURI)	+= aries-panel.o
 obj-$(CONFIG_MACH_VENTURI)	+= sec_switch.o
 obj-$(CONFIG_MACH_VENTURI)	+= sec_jack.o
-=======
+
 obj-$(CONFIG_FORCE_FAST_CHARGE)         += fastchg.o
->>>>>>> 8a02e6d... Force AC (Fast) Charging by Chad Froebel
 
 # device support
 
