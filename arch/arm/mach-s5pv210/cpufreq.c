@@ -342,7 +342,7 @@ static int s5pv210_target(struct cpufreq_policy *policy,
 		pll_changing = 1;
 
 	/* Check if there need to change System bus clock */
-	if ((index == L4) || (freqs.old == s5pv210_freq_table[L4].frequency))
+	if ((index == L3) || (freqs.old == s5pv210_freq_table[L].frequency))
 		bus_speed_changing = 1;
 
 	if (bus_speed_changing) {
@@ -396,7 +396,7 @@ static int s5pv210_target(struct cpufreq_policy *policy,
 		} while (reg & ((1 << 7) | (1 << 3)));
 
 		/*
-		 * 3. DMC1 refresh count for 133Mhz if (index == L4) is
+		 * 3. DMC1 refresh count for 133Mhz if (index == L3) is
 		 * true refresh counter is already programed in upper
 		 * code. 0x287@83Mhz
 		 */
@@ -540,7 +540,7 @@ static int s5pv210_target(struct cpufreq_policy *policy,
 		} while (reg & (1 << 15));
 
 		/* Reconfigure DRAM refresh counter value */
-		if (index != L4) {
+		if (index != L3) {
 			/*
 			 * DMC0 : 166Mhz
 			 * DMC1 : 200Mhz
